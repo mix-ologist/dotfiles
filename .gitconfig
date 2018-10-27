@@ -1,0 +1,17 @@
+[user]
+	email = jeremy.rn.fischer@gmail.com
+	name = Jeremy Fischer
+	signingkey = 3D34E8D91B3BF45E
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/jer/.gitignore_global
+	editor = /usr/local/bin/nvim 
+[diff]
+  tool = vimdiff
+[gpg]
+	program = gpg2
+[commit]
+	gpgsign = true
+[mergetool "vimdiff"]
+	keepBackup = false
