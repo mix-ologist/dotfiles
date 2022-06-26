@@ -1,3 +1,9 @@
+if has('win32') || has ('win64')
+    let $VIMHOME = $VIM."/vimfiles"
+else
+    let $VIMHOME = $HOME."/.vim"
+endif
+
 " these seem reasonable
 source $VIMRUNTIME/defaults.vim
 
@@ -57,7 +63,7 @@ set belloff=all
 " 13 editing text
 
 set udf
-set undodir=~/vimfiles/undo
+set undodir=$VIMHOME/undo
 setglobal backspace=2
 setglobal omnifunc=syntaxcomplete#Complete
 setglobal showmatch
@@ -80,13 +86,13 @@ set ttimeoutlen=100
 " 18 reading and writing files
 set fileformats=unix,dos
 set nobackup
-set backupdir=~/vimfiles/swap
+set backupdir=$VIMHOME/swap
 setglobal autowrite
 setglobal autowriteall
 setglobal autoread
 
 " 19 the swap file
-set dir=~/vimfiles/swap
+set dir=$VIMHOME/swap
 
 " 20 command line editing
 setglobal history=1000
@@ -105,7 +111,7 @@ set nolangremap
 set encoding=utf-8
 
 " 26 various
-set viewdir=~/vimfiles/views
+set viewdir=$VIMHOME/views
 set signcolumn=yes
 
 let mapleader=" "
