@@ -35,13 +35,12 @@ set cmdheight=2
 
 " 5 syntax, highlighting and spelling
 
-filetype plugin indent on           " Enable filetype detection
+filetype plugin indent on
 syntax enable
 syntax on
 filetype plugin on
 set spell
-
-" spellfile?
+set spelllang=en_us
 
 " 6 multiple windows
 set laststatus=2
@@ -65,7 +64,9 @@ set belloff=all
 set udf
 set undodir=$VIMHOME/undo
 setglobal backspace=2
+setglobal complete=.,w,b,u,t,i,kspell
 setglobal omnifunc=syntaxcomplete#Complete
+set dictionary=/usr/share/dict/words
 setglobal showmatch
 set nrformats-=octal
 
