@@ -1,0 +1,23 @@
+# Options in order from `man readline`
+set bell-style visible
+set colored-completion-prefix on
+set colored-stats on
+set completion-display-width 0
+set completion-ignore-case on
+set completion-map-case on
+set completion-query-items -1
+set echo-control-characters off
+set editing-mode vi
+set expand-tilde on
+set input-meta on
+set keymap vi
+set mark-symlinked-directories on
+set output-meta on
+set revert-all-at-newline on
+set show-all-if-ambiguous on
+set show-all-if-unmodified on
+set show-mode-in-prompt on
+set skip-completed-text on
+set vi-cmd-mode-string [c]
+set vi-ins-mode-string [i]
+set visible-stats on

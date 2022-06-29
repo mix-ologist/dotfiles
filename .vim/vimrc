@@ -1,7 +1,12 @@
+" platform specific
 if has('win32') || has ('win64')
     let $VIMHOME = $VIM."/vimfiles"
+    set dictionary=
+    set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 else
     let $VIMHOME = $HOME."/.vim"
+    set dictionary=/usr/share/dict/words
+    set grepprg=grep
 endif
 
 " these seem reasonable
@@ -66,7 +71,7 @@ set undodir=$VIMHOME/undo
 setglobal backspace=2
 setglobal complete=.,w,b,u,t,i,kspell
 setglobal omnifunc=syntaxcomplete#Complete
-set dictionary=/usr/share/dict/words
+"set dictionary=/usr/share/dict/words | see platform specific
 setglobal showmatch
 set nrformats-=octal
 
@@ -103,7 +108,7 @@ setglobal wildmenu
 
 " 21 executing external commands
 " 22 running make and jumping to errors (quickfix)
-set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+" set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case | see platform specific
 
 " 23 system specific
 " 24 language specific
@@ -120,6 +125,5 @@ let mapleader=" "
 " packages 
 packadd! matchit
 packadd! everforest
-
 
 colorscheme everforest
