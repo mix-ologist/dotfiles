@@ -102,7 +102,7 @@ set dir=$VIMHOME/swap
 
 " 20 command line editing
 setglobal history=1000
-setglobal wildmode=full
+setglobal wildmode=list:longest
 setglobal wildignore+=tags,.*.un~,*.pyc
 setglobal wildmenu
 
@@ -119,7 +119,6 @@ set encoding=utf-8
 " 26 various
 set viewdir=$VIMHOME/views
 set signcolumn=yes
-
 let mapleader=" "
 
 " packages 
