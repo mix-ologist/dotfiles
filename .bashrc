@@ -30,7 +30,9 @@ export CLICOLOR=1
 export PS1='\[\e[1;32m\]\u@\H:\[\e[m\] \[\e[1;37m\]\w\[\e[m\]\n\[\e[1;33m\]hist:\! \[\e[0;33m\] \[\e[1;31m\]jobs:\j \$\[\e[m\] '
 export PROMPT_COMMAND='history -a'
 
-source $HOME/dev/go/alacritty/extra/completions/alacritty.bash
-source "$HOME/.cargo/env"
+source ~/dev/go/alacritty/extra/completions/alacritty.bash
+source ~/.cargo/env
 export GOPATH=~/dev/go
 export GOBIN=~/bin
+
+source ~/.bash_aliases

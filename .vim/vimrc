@@ -13,6 +13,11 @@ if has('termguicolors')
     set termguicolors
 endif
 
+" weird alacritty thing https://github.com/alacritty/alacritty/issues/3402
+" this might be changeable when alacritty has a proper terminfo
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48:2;%lu;%lu;%lum"
+
 " these seem reasonable
 source $VIMRUNTIME/defaults.vim
 
