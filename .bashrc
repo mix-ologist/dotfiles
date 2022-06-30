@@ -1,3 +1,4 @@
+# bash 5.1.16(1)-release 
 shopt -s autocd
 shopt -s cdspell
 shopt -s checkhash
@@ -26,6 +27,10 @@ set -o vi
 export EDITOR=vim
 export GPG_TTY=$(tty)
 export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
 export PS1='\[\e[1;32m\]\u@\H:\[\e[m\] \[\e[1;37m\]\w\[\e[m\]\n\[\e[1;33m\]hist:\! \[\e[0;33m\] \[\e[1;31m\]jobs:\j \$\[\e[m\] '
 export PROMPT_COMMAND='history -a'
+
+source $HOME/dev/go/alacritty/extra/completions/alacritty.bash
+source "$HOME/.cargo/env"
+export GOPATH=~/dev/go
+export GOBIN=~/bin

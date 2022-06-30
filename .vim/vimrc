@@ -9,6 +9,10 @@ else
     set grepprg=grep
 endif
 
+if has('termguicolors')
+    set termguicolors
+endif
+
 " these seem reasonable
 source $VIMRUNTIME/defaults.vim
 

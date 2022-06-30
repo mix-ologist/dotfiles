@@ -2,7 +2,7 @@
 set bell-style visible
 set colored-completion-prefix on
 set colored-stats on
-set completion-display-width 0
+set completion-display-width 3
 set completion-ignore-case on
 set completion-map-case on
 set completion-query-items -1
@@ -12,6 +12,7 @@ set expand-tilde on
 set input-meta on
 set keymap vi
 set mark-symlinked-directories on
+set menu-complete-display-prefix on
 set output-meta on
 set revert-all-at-newline on
 set show-all-if-ambiguous on
@@ -21,3 +22,4 @@ set skip-completed-text on
 set vi-cmd-mode-string [c]
 set vi-ins-mode-string [i]
 set visible-stats on
+TAB: menu-complete
