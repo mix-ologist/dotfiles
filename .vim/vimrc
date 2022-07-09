@@ -13,6 +13,10 @@ if has('termguicolors')
     set termguicolors
 endif
 
+" alacritty goofiness
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48:2;%lu;%lu;%lum"
+
 " these seem reasonable
 source $VIMRUNTIME/defaults.vim
 
@@ -107,7 +111,7 @@ set dir=$VIMHOME/swap
 " 20 command line editing
 setglobal history=1000
 setglobal wildmode=list:longest
-setglobal wildignore+=*.un~,*.pyc
+setglobal wildignore+=.un~,*.pyc
 setglobal wildmenu
 
 " 21 executing external commands
@@ -123,7 +127,7 @@ set encoding=utf-8
 " 26 various
 set viewdir=$VIMHOME/views
 set signcolumn=yes
-let mapleader=" "
+let mapleader=","
 
 " packages 
 packadd! matchit

@@ -27,7 +27,7 @@ set -o vi
 export EDITOR=vim
 export GPG_TTY=$(tty)
 export CLICOLOR=1
-export PS1='\[\e[1;32m\]\u@\H:\[\e[m\] \[\e[1;37m\]\w\[\e[m\]\n\[\e[1;33m\]hist:\! \[\e[0;33m\] \[\e[1;31m\]jobs:\j \$\[\e[m\] '
+#export PS1='\[\e[1;32m\]\u@\H:\[\e[m\] \[\e[1;37m\]\w\[\e[m\]\n\[\e[1;33m\]hist:\! \[\e[0;33m\] \[\e[1;31m\]jobs:\j \$\[\e[m\] '
 export PROMPT_COMMAND='history -a'
 
 source ~/.cargo/env
@@ -37,4 +37,11 @@ export GOBIN=~/bin
 source ~/.bash_aliases
 source ~/.bash_completions/alacritty.bash
 
-export WAYLAND_DISPLAY=alacritty
+#export WAYLAND_DISPLAY=alacritty
+
+
+
+
+# commands that ensure consistancy on my machine
+gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 30 || true
+gsettings set org.gnome.desktop.peripherals.keyboard delay 200 || true
